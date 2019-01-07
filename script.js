@@ -1,7 +1,7 @@
 const gameElements = ["stone", "paper", "scissor"];
-const stoneConditions = { stone: "Draw", paper: "Lose", scissor: "Win" };
-const paperConditions = { stone: "Win", paper: "Draw", scissor: "Lose" };
-const scissorConditions = { stone: "Lose", paper: "Win", scissor: "Draw" };
+const stoneConditions = { stone: "Draw", paper: "Win", scissor: "Lose" };
+const paperConditions = { stone: "Lose", paper: "Draw", scissor: "Win" };
+const scissorConditions = { stone: "Win", paper: "Lose", scissor: "Draw" };
 const gameConditions = {
   stone: stoneConditions,
   paper: paperConditions,
@@ -19,7 +19,7 @@ const getElementCondition = function() {
 };
 
 const checkIfWon = function(userElement) {
-  const winningCondition = getElementCondition;
+  const winningCondition = getElementCondition();
   return winningCondition[userElement];
 };
 
