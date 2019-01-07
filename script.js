@@ -1,7 +1,12 @@
 const gameElements = ["stone", "paper", "scissor"];
-const stoneConditions = { stone: "Draw", paper: "Win", scissor: "Lose" };
-const paperConditions = { stone: "Lose", paper: "Draw", scissor: "Win" };
-const scissorConditions = { stone: "Win", paper: "Lose", scissor: "Draw" };
+const draw = "/stone_paper_scissor/images/draw.png";
+const win = "/stone_paper_scissor/images/win.jpeg";
+const lose = "/stone_paper_scissor/images/lose.png";
+
+const stoneConditions = { stone: draw, paper: win, scissor: lose };
+const paperConditions = { stone: lose, paper: draw, scissor: win };
+const scissorConditions = { stone: win, paper: lose, scissor: draw };
+
 const gameConditions = {
   stone: stoneConditions,
   paper: paperConditions,
@@ -24,13 +29,19 @@ const checkIfWon = function(userElement) {
 };
 
 const getResultForStone = function() {
-  alert(checkIfWon("stone"));
+  const resultDiv = document.getElementById("result");
+  const result = checkIfWon("stone");
+  resultDiv.setAttribute("style", `background: url(${result})`);
 };
 
 const getResultForScissor = function() {
-  alert(checkIfWon("scissor"));
+  const resultDiv = document.getElementById("result");
+  const result = checkIfWon("scissor");
+  resultDiv.setAttribute("style", `background: url(${result})`);
 };
 
 const getResultForPaper = function() {
-  alert(checkIfWon("paper"));
+  const resultDiv = document.getElementById("result");
+  const result = checkIfWon("paper");
+  resultDiv.setAttribute("style", `background: url(${result})`);
 };
