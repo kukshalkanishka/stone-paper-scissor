@@ -1,4 +1,5 @@
 const gameElements = ["stone", "paper", "scissor"];
+let gameElement;
 
 const draw = "/stone_paper_scissor/images/draw.png";
 const win = "/stone_paper_scissor/images/win.jpeg";
@@ -15,12 +16,12 @@ const gameConditions = {
 };
 
 const getGameElement = function() {
-  const randomValue = Math.floor(Math.random() * 3);
-  return gameElements[randomValue];
+  const randomElementPosition = Math.floor(Math.random() * 3);
+  return gameElements[randomElementPosition];
 };
 
 const getElementCondition = function() {
-  const gameElement = getGameElement();
+  gameElement = getGameElement();
   return gameConditions[gameElement];
 };
 
@@ -30,30 +31,37 @@ const checkIfWon = function(userElement) {
 };
 
 const getResultForStone = function() {
-  const resultDiv = document.getElementById("result");
+  const computerMove = document.getElementById("computerMove");
   const result = checkIfWon("stone");
+  const resultDiv = document.getElementById("result");
   resultDiv.setAttribute("style", `background: url(${result})`);
+  computerMove.innerHTML = `computerMove: ${gameElement}`;
 };
 
 const getResultForScissor = function() {
+  const computerMove = document.getElementById("computerMove");
   const resultDiv = document.getElementById("result");
   const result = checkIfWon("scissor");
   resultDiv.setAttribute("style", `background: url(${result})`);
+  computerMove.innerHTML = `computerMove ${gameElement}`;
 };
 
 const getResultForPaper = function() {
+  const computerMove = document.getElementById("computerMove");
   const resultDiv = document.getElementById("result");
   const result = checkIfWon("paper");
   resultDiv.setAttribute("style", `background: url(${result})`);
+  computerMove.innerHTML = `computerMove: ${gameElement}`;
 };
 
 const startGame = function() {
   const main = document.getElementById("main");
   main.innerHTML =
-    "<div>" +
+    "<div id='elements'>" +
     '<img  id="stone" src="/stone_paper_scissor/images/stone.png"  onclick="getResultForStone()" />' +
     '<img id="paper" src="/stone_paper_scissor/images/paper.png" onclick="getResultForPaper()" />' +
     '<img id="scissor"  src="/stone_paper_scissor/images/scissor.png" onclick="getResultForScissor()" />' +
     "</div>" +
-    ' <div id="result"></div>';
+    ' <div id="result"></div>' +
+    '<div id="computerMove"></div>';
 };

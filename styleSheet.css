@@ -10,33 +10,52 @@ body {
   background-color: #3c3838;
 }
 
-#stone {
+#stoneToShow {
   margin-top: 50px;
   margin-left: 440px;
   width: 150px;
   height: 150px;
+}
+
+#stone {
+  width: 150px;
+  height: 150px;
   filter: brightness(50%);
+  margin-top: 20px;
 }
 
 #stone:hover {
   filter: brightness(100%);
 }
 
-#paper {
+#paperToShow {
   width: 150px;
   height: 150px;
   margin: 0px 40px;
+}
+
+#paper {
+  width: 150px;
+  height: 150px;
   filter: brightness(50%);
+  display: block;
+  margin-top: 20px;
 }
 
 #paper:hover {
   filter: brightness(100%);
 }
 
+#scissorToShow {
+  width: 150px;
+  height: 150px;
+}
+
 #scissor {
   width: 150px;
   height: 150px;
   filter: brightness(50%);
+  margin-top: 20px;
 }
 
 #scissor:hover {
@@ -52,8 +71,17 @@ body {
 #play {
   width: 200px;
   height: 200px;
+  padding: 60px 600px;
 }
 
 #play:hover {
   filter: brightness(50%);
+}
+
+#elements {
+  width: 600px;
+}
+
+#computerMove {
+  font-size: 400px;
 }
