@@ -7,9 +7,22 @@
   </head>
   <body>
     <header>Stone Paper Scissor</header>
-    <div id="stone" onclick="getResultForStone()"></div>
-    <div id="paper" onclick="getResultForPaper()"></div>
-    <div id="scissor" onclick="getResultForScissor()"></div>
-    <div id="result"></div>
+    <div id="main">
+      <div>
+        <img id="stone" src="/stone_paper_scissor/images/stone.png" />
+
+        <img id="paper" src="/stone_paper_scissor/images/paper.png" />
+
+        <img id="scissor" src="/stone_paper_scissor/images/scissor.png" />
+      </div>
+
+      <div id="startGame">
+        <img
+          id="play"
+          src="/stone_paper_scissor/images/play.png"
+          onclick="startGame()"
+        />
+      </div>
+    </div>
   </body>
 </html>

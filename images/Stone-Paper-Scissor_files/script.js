@@ -46,14 +46,3 @@ const getResultForPaper = function() {
   const result = checkIfWon("paper");
   resultDiv.setAttribute("style", `background: url(${result})`);
 };
-
-const startGame = function() {
-  const main = document.getElementById("main");
-  main.innerHTML =
-    "<div>" +
-    '<img  id="stone" src="/stone_paper_scissor/images/stone.png"  onclick="getResultForStone()" />' +
-    '<img id="paper" src="/stone_paper_scissor/images/paper.png" onclick="getResultForPaper()" />' +
-    '<img id="scissor"  src="/stone_paper_scissor/images/scissor.png" onclick="getResultForScissor()" />' +
-    "</div>" +
-    ' <div id="result"></div>';
-};

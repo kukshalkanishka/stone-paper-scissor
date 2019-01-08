@@ -12,48 +12,20 @@ body {
 
 #stone {
   margin-top: 50px;
-  margin-left: 440px;
+  margin-left: 500px;
   width: 150px;
   height: 150px;
-  filter: brightness(50%);
 }
-
-#stone:hover {
-  filter: brightness(100%);
-}
-
 #paper {
   width: 150px;
   height: 150px;
-  margin: 0px 40px;
-  filter: brightness(50%);
 }
-
-#paper:hover {
-  filter: brightness(100%);
-}
-
 #scissor {
   width: 150px;
   height: 150px;
-  filter: brightness(50%);
 }
-
-#scissor:hover {
-  filter: brightness(100%);
-}
-
 #result {
   width: 300px;
   height: 200px;
   background-size: contain;
-}
-
-#play {
-  width: 200px;
-  height: 200px;
-}
-
-#play:hover {
-  filter: brightness(50%);
 }
