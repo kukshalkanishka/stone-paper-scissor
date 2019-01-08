@@ -78,10 +78,16 @@ body {
   filter: brightness(50%);
 }
 
-#elements {
-  width: 600px;
+.flex {
+  display: flex;
 }
 
-#computerMove {
-  font-size: 50px;
+.displayResult {
+  margin: 100px 400px;
+  display: block;
+  font-size: 30px;
+}
+
+#result {
+  background-size: stretch;
 }
