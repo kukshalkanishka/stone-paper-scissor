@@ -23,7 +23,7 @@ body {
   display: block;
 }
 
-#stoneToShow {
+#unclickableStone {
   margin-top: 50px;
   margin-left: 440px;
 }
@@ -32,7 +32,7 @@ body {
   filter: brightness(100%);
 }
 
-#paperToShow {
+#unclickablePaper {
   margin: 0px 40px;
 }
 

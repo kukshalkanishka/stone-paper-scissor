@@ -34,7 +34,7 @@ const getResultForStone = function() {
   const computerMove = document.getElementById("computerMove");
   const result = checkIfWon("stone");
   const resultDiv = document.getElementById("result");
-  resultDiv.setAttribute("style", `background: url(${result})`);
+  resultDiv.setAttribute("src", result);
   computerMove.innerHTML = `Computer's move: ${gameElement}`;
 };
 
@@ -42,7 +42,7 @@ const getResultForScissor = function() {
   const computerMove = document.getElementById("computerMove");
   const resultDiv = document.getElementById("result");
   const result = checkIfWon("scissor");
-  resultDiv.setAttribute("style", `background: url(${result})`);
+  resultDiv.setAttribute("src", result);
   computerMove.innerHTML = `Computer's move: ${gameElement}`;
 };
 
@@ -50,7 +50,7 @@ const getResultForPaper = function() {
   const computerMove = document.getElementById("computerMove");
   const resultDiv = document.getElementById("result");
   const result = checkIfWon("paper");
-  resultDiv.setAttribute("style", `background: url(${result})`);
+  resultDiv.setAttribute("src", result);
   computerMove.innerHTML = `Computer's move: ${gameElement}`;
 };
 
@@ -65,7 +65,7 @@ const startGame = function() {
     '<img id="scissor"  class= "elements" src="/stone_paper_scissor/images/scissor.png"' +
     ' onclick="getResultForScissor()" />' +
     "</div>" +
-    '<div> <div id="result" class= "displayResult"></div>' +
+    '<div> <img id="result" class= "displayResult"/>' +
     '<div id="computerMove" class = "displayResult"></div> ' +
     "</div></div>";
 };
