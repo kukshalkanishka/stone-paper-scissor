@@ -3,7 +3,7 @@ let gameElement;
 
 const draw = "/stone_paper_scissor/images/draw.png";
 const win = "/stone_paper_scissor/images/win.jpeg";
-const lose = "/stone_paper_scissor/images/lose.png";
+const lose = "/stone_paper_scissor/images/youLose.jpg";
 
 const stoneConditions = { stone: draw, paper: win, scissor: lose };
 const paperConditions = { stone: lose, paper: draw, scissor: win };
@@ -35,7 +35,7 @@ const getResultForStone = function() {
   const result = checkIfWon("stone");
   const resultDiv = document.getElementById("result");
   resultDiv.setAttribute("style", `background: url(${result})`);
-  computerMove.innerHTML = `ComputerMove: ${gameElement}`;
+  computerMove.innerHTML = `Computer's move: ${gameElement}`;
 };
 
 const getResultForScissor = function() {
@@ -43,7 +43,7 @@ const getResultForScissor = function() {
   const resultDiv = document.getElementById("result");
   const result = checkIfWon("scissor");
   resultDiv.setAttribute("style", `background: url(${result})`);
-  computerMove.innerHTML = `ComputerMove: ${gameElement}`;
+  computerMove.innerHTML = `Computer's move: ${gameElement}`;
 };
 
 const getResultForPaper = function() {
@@ -51,16 +51,19 @@ const getResultForPaper = function() {
   const resultDiv = document.getElementById("result");
   const result = checkIfWon("paper");
   resultDiv.setAttribute("style", `background: url(${result})`);
-  computerMove.innerHTML = `ComputerMove: ${gameElement}`;
+  computerMove.innerHTML = `Computer's move: ${gameElement}`;
 };
 
 const startGame = function() {
   const main = document.getElementById("main");
   main.innerHTML =
     "<div class = 'flex'><div id='elements'>" +
-    '<img  id="stone" src="/stone_paper_scissor/images/stone.png"  onclick="getResultForStone()" />' +
-    '<img id="paper" src="/stone_paper_scissor/images/paper.png" onclick="getResultForPaper()" />' +
-    '<img id="scissor"  src="/stone_paper_scissor/images/scissor.png" onclick="getResultForScissor()" />' +
+    '<img  id="stone" class = "elements" src="/stone_paper_scissor/images/stone.png"' +
+    'onclick="getResultForStone()" />' +
+    '<img id="paper" class= "elements" src="/stone_paper_scissor/images/paper.png"' +
+    'onclick="getResultForPaper()" />' +
+    '<img id="scissor"  class= "elements" src="/stone_paper_scissor/images/scissor.png"' +
+    ' onclick="getResultForScissor()" />' +
     "</div>" +
     '<div> <div id="result" class= "displayResult"></div>' +
     '<div id="computerMove" class = "displayResult"></div> ' +
